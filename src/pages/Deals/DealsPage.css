@@ -9,9 +9,9 @@
   gap: 20px;
   padding: 24px;
   border-radius: 16px;
-  background: #ffffff;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 12px 40px rgba(2,6,23,0.55);
 }
 
 .deals-page__subtitle {
@@ -47,8 +47,8 @@
   gap: 6px;
   padding: 14px;
   border-radius: 14px;
-  background: #f8fafc;
-  border: 1px solid #eef2f7;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .deals-page__trend {
@@ -61,7 +61,7 @@
 .deals-page__trend span {
   flex: 1;
   border-radius: 999px 999px 6px 6px;
-  background: #cbd5e1;
+  background: linear-gradient(180deg, rgba(124,58,237,0.18), rgba(79,70,229,0.14));
 }
 
 .deals-page__summary-list strong,

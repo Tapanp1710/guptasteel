@@ -29,17 +29,19 @@ export default function ModulePage({ config }) {
 
   return (
     <div className="module-page page-shell">
-      <section className="module-page__hero">
-        <div>
-          <p className="kicker">{config.kicker}</p>
-          <h1 className="h1">{config.title}</h1>
-          <p className="module-page__subtitle">{config.subtitle}</p>
-        </div>
-        <div className="module-page__hero-actions">
-          {config.primaryAction ? <Button icon={<PlusIcon size={16} />}>{config.primaryAction}</Button> : null}
-          <div className="module-page__autosave">{autoSave.statusLabel}</div>
-        </div>
-      </section>
+      {config.showHero ? (
+        <section className="module-page__hero">
+          <div>
+            <p className="kicker">{config.kicker}</p>
+            <h1 className="h1">{config.title}</h1>
+            <p className="module-page__subtitle">{config.subtitle}</p>
+          </div>
+          <div className="module-page__hero-actions">
+            {config.primaryAction ? <Button icon={<PlusIcon size={16} />}>{config.primaryAction}</Button> : null}
+            <div className="module-page__autosave">{autoSave.statusLabel}</div>
+          </div>
+        </section>
+      ) : null}
 
       {workflowItems.length ? (
         <section className="module-page__workflow card-shell">

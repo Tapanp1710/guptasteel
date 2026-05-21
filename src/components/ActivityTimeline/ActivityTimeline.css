@@ -36,8 +36,8 @@
 
 .activity-timeline__copy {
   border-radius: 16px;
-  border: 1px solid #eef2f7;
-  background: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
   padding: 14px;
 }
 

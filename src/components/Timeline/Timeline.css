@@ -10,8 +10,8 @@
   gap: 8px;
   padding: 14px;
   border-radius: 16px;
-  border: 1px solid var(--border);
-  background: #ffffff;
+  border: 1px solid rgba(255,255,255,0.03);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
   color: var(--muted);
   text-align: center;
 }
@@ -25,17 +25,18 @@
   width: 10px;
   height: 10px;
   border-radius: 999px;
-  background: #cbd5e1;
+  background: rgba(255,255,255,0.06);
 }
 
 .workflow-timeline__step.is-active {
   color: var(--text);
-  border-color: #cbd5e1;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: rgba(124,58,237,0.18);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
 }
 
 .workflow-timeline__step.is-active .workflow-timeline__dot {
-  background: var(--primary);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  box-shadow: 0 6px 18px rgba(79,70,229,0.2);
 }
 
 @media (max-width: 960px) {

@@ -14,7 +14,7 @@
 .kanban-card:hover,
 .kanban-card:focus-visible {
   transform: translateY(-2px);
-  border-color: #cbd5e1;
+  border-color: rgba(124, 58, 237, 0.22);
 }
 
 .kanban-card__header {
@@ -61,8 +61,8 @@
   gap: 4px;
   padding: 12px;
   border-radius: 14px;
-  background: #f8fafc;
-  border: 1px solid #eef2f7;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .kanban-card__meta strong {
@@ -85,8 +85,8 @@
   min-height: 32px;
   padding: 0 9px;
   border-radius: 999px;
-  border: 1px solid #dbe3ee;
-  background: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
   color: var(--text);
   font-size: 0.8rem;
   font-weight: 600;

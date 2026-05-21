@@ -45,7 +45,7 @@
   padding: 0 14px;
   border-radius: 16px;
   border: 1px solid var(--border);
-  background: #f8fafc;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .data-table-card__search input,
@@ -68,7 +68,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background: #f8fafc;
+  background: rgba(255, 255, 255, 0.02);
   text-align: left;
   font-size: 0.82rem;
   text-transform: uppercase;
@@ -88,10 +88,15 @@
   border-bottom: 1px solid #edf2f7;
   font-size: 0.94rem;
   white-space: nowrap;
+  background: transparent;
 }
 
 .data-table-card tbody tr:hover {
-  background: #f8fafc;
+  background: rgba(79, 70, 229, 0.08);
+}
+
+.data-table-card tbody tr:hover td {
+  background: rgba(79, 70, 229, 0.08);
 }
 
 .actions-column {
@@ -109,7 +114,7 @@
   padding: 0 12px;
   border-radius: 14px;
   border: 1px solid #dbeafe;
-  background: #eff6ff;
+  background: rgba(255, 255, 255, 0.02);
   color: var(--primary);
   cursor: pointer;
 }

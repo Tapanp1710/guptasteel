@@ -15,7 +15,7 @@
 }
 
 .ui-card--soft {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .ui-card__header {

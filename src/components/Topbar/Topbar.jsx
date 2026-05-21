@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Topbar.css';
 import SearchBar from '../SearchBar/SearchBar';
 import Button from '../Button/Button';
@@ -8,6 +8,23 @@ import { useAppContext } from '../../contexts/AppContext';
 export default function Topbar() {
   const { unreadCount, setIsNotificationPanelOpen, openQuickAction } = useAppContext();
   const [profileOpen, setProfileOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('theme');
+    const prefersDark = stored ? stored === 'dark' : true;
+    setIsDark(prefersDark);
+    if (prefersDark) document.body.classList.add('theme-dark');
+    else document.body.classList.remove('theme-dark');
+  }, []);
+
+  function toggleTheme() {
+    const next = !isDark;
+    setIsDark(next);
+    if (next) document.body.classList.add('theme-dark');
+    else document.body.classList.remove('theme-dark');
+    localStorage.setItem('theme', next ? 'dark' : 'light');
+  }
 
   return (
     <header className="topbar">
@@ -42,6 +59,10 @@ export default function Topbar() {
             </div>
           ) : null}
         </div>
+
+        <button className="topbar__icon-button" type="button" onClick={toggleTheme} aria-label="Toggle theme">
+          {isDark ? '🌙' : '☀️'}
+        </button>
 
         <Button icon={<PlusIcon size={16} />} onClick={() => openQuickAction('lead')}>
           Quick Action

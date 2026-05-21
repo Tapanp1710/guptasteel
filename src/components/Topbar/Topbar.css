@@ -58,6 +58,15 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
+.topbar__icon-button[aria-label="Toggle theme"] {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 1.05rem;
+}
+
 .topbar__icon-button:hover,
 .topbar__profile:hover,
 .topbar__dropdown button:hover {
@@ -116,8 +125,8 @@
   border-radius: 12px;
   display: grid;
   place-items: center;
-  background: rgba(30, 64, 175, 0.12);
-  color: var(--primary);
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  color: white;
 }
 
 .topbar__profile-copy {
@@ -159,7 +168,7 @@
 }
 
 .topbar__dropdown button:hover {
-  background: #f8fafc;
+  background: rgba(255, 255, 255, 0.04);
 }
 
 @media (max-width: 1200px) {

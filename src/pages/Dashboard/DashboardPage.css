@@ -14,9 +14,9 @@
   gap: 20px;
   padding: 24px;
   border-radius: 16px;
-  background: #ffffff;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 12px 40px rgba(2,6,23,0.55);
 }
 
 .dashboard-page__subtitle {
@@ -53,6 +53,21 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.dashboard-page__widgets .ui-card {
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.dashboard-page__widgets .ui-card__title {
+  font-size: 0.95rem;
+}
+
+.dashboard-page__widgets strong {
+  font-size: 1.45rem;
+}
+
 .dashboard-page__bottom-grid {
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.9fr);
   align-items: start;
@@ -75,9 +90,9 @@
   display: grid;
   gap: 6px;
   padding: 14px;
-  border-radius: 14px;
-  background: #f8fafc;
-  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
 }
 
 .dashboard-page__task-list div,
@@ -95,7 +110,7 @@
 .dashboard-page__trend span {
   flex: 1;
   border-radius: 999px 999px 6px 6px;
-  background: #cbd5e1;
+  background: linear-gradient(180deg, rgba(124,58,237,0.18), rgba(79,70,229,0.14));
 }
 
 .dashboard-page__summary-list strong,

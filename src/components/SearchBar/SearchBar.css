@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  min-width: min(100%, 540px);
-  height: 50px;
-  padding: 0 16px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  background: #ffffff;
-  box-shadow: var(--shadow);
+  min-width: min(100%, 640px);
+  height: 56px;
+  padding: 0 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
 }
 
 .search-bar__icon {
@@ -21,9 +21,8 @@
   border: 0;
   background: transparent;
   color: var(--text);
-  font-weight: 500;
+  font-weight: 600;
 }
-
 .search-bar input::placeholder {
-  color: #94a3b8;
+  color: var(--muted);
 }
