@@ -1,0 +1,122 @@
+.kanban-card {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: grab;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  min-height: 250px;
+}
+
+.kanban-card:hover,
+.kanban-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+}
+
+.kanban-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.kanban-card__header h4 {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.kanban-card__header p,
+.kanban-card__value-row span,
+.kanban-card__meta span,
+.kanban-card__time {
+  color: var(--muted);
+  margin: 6px 0 0;
+  font-size: 0.84rem;
+}
+
+.kanban-card__value-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.kanban-card__value-row strong {
+  font-size: 1.15rem;
+}
+
+.kanban-card__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.kanban-card__meta div {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+}
+
+.kanban-card__meta strong {
+  font-size: 0.92rem;
+}
+
+.kanban-card__footer {
+  display: grid;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.kanban-card__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kanban-card__actions button {
+  min-height: 32px;
+  padding: 0 9px;
+  border-radius: 999px;
+  border: 1px solid #dbe3ee;
+  background: #f8fafc;
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.kanban-card__actions button:hover,
+.kanban-card__actions button:focus-visible {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+}
+
+@media (max-width: 960px) {
+  .kanban-card {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 640px) {
+  .kanban-card {
+    min-height: 0;
+  }
+
+  .kanban-card__actions {
+    gap: 6px;
+  }
+
+  .kanban-card__actions button {
+    min-height: 30px;
+    padding: 0 8px;
+  }
+}
