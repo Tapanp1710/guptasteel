@@ -1,0 +1,158 @@
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--sidebar-width);
+  background: #ffffff;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 18px 14px;
+  z-index: 20;
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 18px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+
+.sidebar__logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: var(--primary);
+  color: white;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.sidebar__brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sidebar__brand-copy strong {
+  font-size: 0.96rem;
+}
+
+.sidebar__brand-copy span,
+.sidebar__footer-card p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.sidebar__nav {
+  display: grid;
+  gap: 6px;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 50px;
+  padding: 0 14px;
+  border-radius: 14px;
+  color: var(--text);
+  font-weight: 600;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.sidebar__link:hover,
+.sidebar__link.is-active {
+  background: #eff6ff;
+  color: var(--primary);
+}
+
+.sidebar__icon {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  color: currentColor;
+  flex: 0 0 auto;
+}
+
+.sidebar__label {
+  white-space: nowrap;
+}
+
+.sidebar__footer {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.sidebar__footer-card {
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  padding: 14px;
+}
+
+.sidebar__footer-card strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.96rem;
+}
+
+@media (max-width: 1280px) {
+  .sidebar__brand-copy,
+  .sidebar__label,
+  .sidebar__footer {
+    display: none;
+  }
+
+  .sidebar__brand {
+    justify-content: center;
+    padding-bottom: 14px;
+  }
+
+  .sidebar__link {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .sidebar {
+    width: 100%;
+    height: 72px;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    overflow-x: auto;
+  }
+
+  .sidebar__brand {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding: 0 10px 0 0;
+  }
+
+  .sidebar__nav {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .sidebar__link {
+    min-height: 40px;
+    padding: 0 12px;
+  }
+
+  .sidebar__brand-copy,
+  .sidebar__footer {
+    display: none;
+  }
+}

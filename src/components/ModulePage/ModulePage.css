@@ -1,0 +1,249 @@
+.module-page {
+  display: grid;
+  gap: 20px;
+}
+
+.module-page__hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.module-page__workflow {
+  display: grid;
+  gap: 16px;
+}
+
+.module-page__workflow-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.module-page__workflow-note {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.module-page__workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.module-page__workflow-step {
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  display: grid;
+  gap: 6px;
+  min-height: 100px;
+}
+
+.module-page__workflow-step strong {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.module-page__workflow-step span {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.module-page__subtitle {
+  margin-top: 10px;
+  max-width: 920px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.module-page__hero-actions {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+}
+
+.module-page__autosave {
+  font-weight: 700;
+  color: var(--success);
+}
+
+.module-page__stat {
+  display: grid;
+  gap: 8px;
+}
+
+.module-page__stat strong {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.module-page__stat span {
+  color: var(--muted);
+}
+
+.module-page__columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+  gap: 18px;
+}
+
+.module-page__left,
+.module-page__right {
+  display: grid;
+  gap: 18px;
+}
+
+.module-page__feature-list {
+  display: grid;
+  gap: 12px;
+}
+
+.module-page__feature-item {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.module-page__feature-item span {
+  width: 12px;
+  height: 12px;
+  margin-top: 5px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+}
+
+.module-page__feature-item p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.module-page__snapshot {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.module-page__snapshot div {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+}
+
+.module-page__snapshot strong {
+  font-size: 1.18rem;
+}
+
+.module-page__snapshot span {
+  color: var(--muted);
+}
+
+.module-page__form-shell {
+  display: grid;
+  gap: 16px;
+}
+
+.module-page__form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.module-page__field {
+  display: grid;
+  gap: 8px;
+}
+
+.module-page__field span {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.module-page__field input,
+.module-page__field textarea {
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+}
+
+.module-page__field textarea {
+  padding-top: 14px;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.module-page__form-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.module-page__form-foot span {
+  color: var(--success);
+  font-weight: 700;
+}
+
+@media (max-width: 1280px) {
+  .module-page__columns {
+    grid-template-columns: 1fr;
+  }
+
+  .module-page__workflow-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .module-page__hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .module-page__workflow-head {
+    align-items: flex-start;
+  }
+
+  .module-page__hero-actions {
+    justify-items: start;
+  }
+
+  .module-page__snapshot {
+    grid-template-columns: 1fr;
+  }
+
+  .module-page__workflow-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .module-page__form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .module-page__workflow-steps {
+    grid-template-columns: 1fr;
+  }
+}
