@@ -120,7 +120,7 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="flex flex-col h-full overflow-hidden select-none space-y-6 p-6 w-full pb-8 animate-in fade-in duration-300">
+    <div className="flex flex-col select-none space-y-6 w-full animate-in fade-in duration-300">
       {/* 1. Header welcome block & Live clock */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-slate-200/50 pb-5">
         <div>
