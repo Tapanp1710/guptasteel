@@ -1,0 +1,82 @@
+Created At: 2026-05-22T14:46:13Z
+Completed At: 2026-05-22T14:46:14Z
+File Path: `file:///c:/Users/ADMIN/OneDrive/Desktop/project/src/components/kanban-board.tsx`
+Total Lines: 157
+Total Bytes: 7144
+Showing lines 1 to 157
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: "use client";
+2: 
+3: import { useState } from "react";
+4: import Link from "next/link";
+5: import { Building2 } from "lucide-react";
+6: import { mockEnquiries } from "@/lib/mock-data";
+7: import { Badge } from "@/components/ui/badge";
+8: 
+9: type EnquiryStatus = "OPEN" | "QUOTED" | "NEGOTIATION" | "WON" | "LOST";
+10: type Priority = "LOW" | "MEDIUM" | "HIGH";
+11: 
+12: const stages: { status: EnquiryStatus; label: string; color: string; icon: string }[] = [
+13:   { status: "OPEN", label: "New", color: "bg-blue-50 border-blue-200", icon: "🔵" },
+14:   { status: "QUOTED", label: "In Progress", color: "bg-orange-50 border-orange-200", icon: "🟠" },
+15:   { status: "NEGOTIATION", label: "Quoted", color: "bg-purple-50 border-purple-200", icon: "🟣" },
+16:   { status: "WON", label: "Won", color: "bg-green-50 border-green-200", icon: "🟢" },
+17: ];
+18: 
+19: const tabs: EnquiryStatus[] = ["OPEN", "QUOTED", "NEGOTIATION", "WON"];
+20: 
+21: const priorityColors: Record<Priority, { bg: string; text: string }> = {
+22:   LOW: { bg: "bg-green-100", text: "text-green-800" },
+23:   MEDIUM: { bg: "bg-orange-100", text: "text-orange-800" },
+24:   HIGH: { bg: "bg-red-100", text: "text-red-800" },
+25: };
+26: 
+27: export function KanbanBoard() {
+28:   const [activeTab, setActiveTab] = useState<EnquiryStatus>("OPEN");
+29: 
+30:   const wonCount = mockEnquiries.filter((e) => e.status === "WON").length;
+31:   const enquiriesByStage = stages.map((stage) => ({
+32:     ...stage,
+33:     cards: mockEnquiries.filter((e) => e.status === stage.status),
+<truncated 4269 bytes>
+            <span>Project Site</span>
+119:                     </div>
+120: 
+121:                     {/* Product */}
+122:                     <div className="mb-3 text-xs font-medium text-slate-700">
+123:                       {enquiry.product} {enquiry.qty}
+124:                       {enquiry.unit}
+125:                     </div>
+126: 
+127:                     {/* Bottom Row: Avatar + Assigned + Value + Date */}
+128:                     <div className="border-t border-slate-100 pt-3">
+129:                       <div className="mb-2 flex items-center gap-2">
+130:                         <div className="h-6 w-6 rounded-full bg-blue-500 text-xs font-bold text-white flex items-center justify-center">
+131:                           {enquiry.assignedTo.charAt(0)}
+132:                         </div>
+133:                         <span className="text-xs font-medium text-slate-700">{enquiry.assignedTo}</span>
+134:                       </div>
+135:                       <div className="flex items-center justify-between text-xs">
+136:                         <span className="font-semibold text-slate-900">₹{(enquiry.value / 100000).toFixed(1)}L</span>
+137:                         <span className="text-slate-500">{enquiry.date}</span>
+138:                       </div>
+139: 
+140:                       {/* Move to Pricing Button for Won cards */}
+141:                       {stage.status === "WON" && (
+142:                         <button className="mt-3 w-full rounded-md bg-rose-100 px-2 py-1.5 text-xs font-medium text-rose-700 hover:bg-rose-200 transition-colors">
+143:                           Move to P→
+144:                         </button>
+145:                       )}
+146:                     </div>
+147:                   </Link>
+148:                 ))}
+149:               </div>
+150:             </div>
+151:           ))}
+152:         </div>
+153:       </div>
+154:     </div>
+155:   );
+156: }
+157: 
+The above content shows the entire, complete file contents of the requested file.

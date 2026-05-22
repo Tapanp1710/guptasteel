@@ -1,0 +1,120 @@
+Created At: 2026-05-22T17:42:27Z
+Completed At: 2026-05-22T17:42:27Z
+File Path: `file:///C:/Users/ADMIN/OneDrive/Desktop/project/original_kanban.txt`
+Total Lines: 147
+Total Bytes: 4120
+Showing lines 1 to 147
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: Created At: 2026-05-22T17:34:59Z
+2: Completed At: 2026-05-22T17:35:00Z
+3: File Path: `file:///C:/Users/ADMIN/OneDrive/Desktop/project/src/components/kanban-board.tsx`
+4: Total Lines: 322
+5: Total Bytes: 7872
+6: Showing lines 1 to 322
+7: The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+8: 1: "use client";
+9: 2: 
+10: 3: import { useEffect, useRef, useState } from "react";
+11: 4: import Link from "next/link";
+12: 5: import {
+13: 6:   Building2,
+14: 7:   Search,
+15: 8:   Filter,
+16: 9:   Plus,
+17: 10:   Check,
+18: 11:   ArrowRight,
+19: 12:   MoreHorizontal,
+20: 13: } from "lucide-react";
+21: 14: 
+22: 15: type Priority =
+23: 16:   | "Low"
+24: 17:   | "Medium"
+25: 18:   | "High"
+26: 19:   | "Urgent"
+27: 20:   | "Priority"
+28: 21:   | "Big Deal";
+29: 22: 
+30: 23: type Stage = "New" | "In Progress" | "Quoted" | "Won";
+31: 24: 
+32: 25: interface CardItem {
+33: 26:   id: string;
+34: 27:   category?: string;
+35: 28:   priority: Priority;
+36: 29:   customer: string;
+37: 30:   company: string;
+38: 31:   site: string;
+39: 32:   product: string;
+40: 33:   assignedTo: string;
+41: 34:   value: string;
+42: 35:   date: string;
+43: 36:   stage: Stage;
+44: 37: }
+45: 38: 
+46: 39: const initialCards: CardItem[] = [
+47: 40:   {
+48: 41:     id: "RFQ-0042",
+49: 42:     category: "Industrial",
+50: 43:     priority: "Medium",
+51: 44:     customer: "Salim Al Balushi",
+52: 45:     company: "Gulf Star Infra",
+5
+<truncated 1183 bytes>
+      <div className="flex gap-2 mt-2">
+91: 268: 
+92: 269:                       <Building2 size={14}/>
+93: 270:                       <span className="text-xs">
+94: 271:                         {card.site}
+95: 272:                       </span>
+96: 273: 
+97: 274:                     </div>
+98: 275: 
+99: 276:                     <div className="bg-slate-100 rounded-lg p-2 mt-2 text-xs">
+100: 277:                       {card.product}
+101: 278:                     </div>
+102: 279: 
+103: 280:                     <div className="flex justify-between mt-4">
+104: 281: 
+105: 282:                       <span className="text-xs">
+106: 283:                         {card.assignedTo}
+107: 284:                       </span>
+108: 285: 
+109: 286:                       <span className="font-bold">
+110: 287:                         {card.value}
+111: 288:                       </span>
+112: 289: 
+113: 290:                     </div>
+114: 291: 
+115: 292:                     {card.stage==="Won" && (
+116: 293: 
+117: 294:                       <button
+118: 295:                         onClick={() =>
+119: 296:                           moveCard(card.id,"Quoted")
+120: 297:                         }
+121: 298:                         className="mt-3 flex w-full justify-center items-center gap-2 rounded-lg bg-rose-50 p-2"
+122: 299:                       >
+123: 300:                         Move To Pricing
+124: 301:                         <ArrowRight size={14}/>
+125: 302:                       </button>
+126: 303: 
+127: 304:                     )}
+128: 305: 
+129: 306:                   </div>
+130: 307: 
+131: 308:                 ))}
+132: 309: 
+133: 310:               </div>
+134: 311: 
+135: 312:             </div>
+136: 313: 
+137: 314:           );
+138: 315: 
+139: 316:         })}
+140: 317: 
+141: 318:       </div>
+142: 319: 
+143: 320:     </div>
+144: 321:   );
+145: 322: }
+146: The above content shows the entire, complete file contents of the requested file.
+147: 
+The above content shows the entire, complete file contents of the requested file.

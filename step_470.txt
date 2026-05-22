@@ -1,0 +1,106 @@
+Created At: 2026-05-22T17:53:10Z
+Completed At: 2026-05-22T17:53:10Z
+File Path: `file:///C:/Users/ADMIN/OneDrive/Desktop/project/step_125.txt`
+Total Lines: 109
+Total Bytes: 3568
+Showing lines 1 to 109
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: Created At: 2026-05-22T14:53:13Z
+2: Completed At: 2026-05-22T14:53:13Z
+3: File Path: `file:///c:/Users/ADMIN/OneDrive/Desktop/project/src/components/kanban-board.tsx`
+4: Total Lines: 398
+5: Total Bytes: 16966
+6: Showing lines 1 to 100
+7: The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+8: 1: "use client";
+9: 2: 
+10: 3: import { useState } from "react";
+11: 4: import Link from "next/link";
+12: 5: import { Building2, Search, Filter, Plus, ChevronDown, Check, ArrowRight, MoreHorizontal } from "lucide-react";
+13: 6: import { Badge } from "@/components/ui/badge";
+14: 7: 
+15: 8: type Priority = "Low" | "Medium" | "High" | "Urgent" | "Priority" | "Big Deal";
+16: 9: type Stage = "New" | "In Progress" | "Quoted" | "Won";
+17: 10: 
+18: 11: interface CardItem {
+19: 12:   id: string;
+20: 13:   category?: string;
+21: 14:   priority: Priority;
+22: 15:   customer: string;
+23: 16:   company: string;
+24: 17:   site: string;
+25: 18:   product: string;
+26: 19:   assignedTo: string;
+27: 20:   value: string;
+28: 21:   date: string;
+29: 22:   stage: Stage;
+30: 23: }
+31: 24: 
+32: 25: const initialCards: CardItem[] = [
+33: 26:   {
+34: 27:     id: "RFQ-0042",
+35: 28:     category: "Industrial",
+36: 29:     priority: "Medium",
+37: 30:     customer: "Salim Al Balushi",
+38: 31:     company: "Gulf Star Infra",
+39: 32:     site: "Sohar Port Warehouse",
+40: 33:     product: "MS Plate 12mm × 20MT",
+41: 34:     assigned
+<truncated 434 bytes>
+gnedTo: "Adil Raaz",
+55: 48:     value: "₹15.8L",
+56: 49:     date: "13 May 2026",
+57: 50:     stage: "New",
+58: 51:   },
+59: 52:   {
+60: 53:     id: "RFQ-0039",
+61: 54:     category: "Priority",
+62: 55:     priority: "High",
+63: 56:     customer: "Khalid Al Rawahi",
+64: 57:     company: "Oman Builders Co.",
+65: 58:     site: "Salalah Tower Block A",
+66: 59:     product: "ISMB 300 × 25MT, Angle 65×65 × 5MT",
+67: 60:     assignedTo: "Karthik Y",
+68: 61:     value: "₹12.1L",
+69: 62:     date: "12 May 2026",
+70: 63:     stage: "In Progress",
+71: 64:   },
+72: 65:   {
+73: 66:     id: "RFQ-0037",
+74: 67:     category: "Low",
+75: 68:     priority: "Low",
+76: 69:     customer: "Ahmed Al Zadjali",
+77: 70:     company: "Muscat Infra Pvt",
+78: 71:     site: "Barka Commercial Complex",
+79: 72:     product: "HR Coil 3mm × 15MT",
+80: 73:     assignedTo: "Omnia Steels",
+81: 74:     value: "₹6.3L",
+82: 75:     date: "10 May 2026",
+83: 76:     stage: "Quoted",
+84: 77:   },
+85: 78:   {
+86: 79:     id: "RFQ-0035",
+87: 80:     category: "Big Deal",
+88: 81:     priority: "High",
+89: 82:     customer: "Nasser Al Saadi",
+90: 83:     company: "Al Madina Construction",
+91: 84:     site: "Nizwa Residential G+4",
+92: 85:     product: "TMT 12mm × 30MT, TMT 16mm × 20MT",
+93: 86:     assignedTo: "Karthik Y",
+94: 87:     value: "₹24.0L",
+95: 88:     date: "08 May 2026",
+96: 89:     stage: "Quoted",
+97: 90:   },
+98: 91:   {
+99: 92:     id: "RFQ-0031",
+100: 93:     category: "Standard",
+101: 94:     priority: "Medium",
+102: 95:     customer: "Ibrahim Al Lawati",
+103: 96:     company: "Gulf Steel Works",
+104: 97:     site: "Seeb Industrial She...",
+105: 98:     product: "ISMB 200 × 10MT",
+106: 99:     assignedTo: "Adil Raaz",
+107: 100:     value: "₹4.8L",
+108: The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+109: 
+The above content shows the entire, complete file contents of the requested file.

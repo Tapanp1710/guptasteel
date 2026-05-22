@@ -1,0 +1,108 @@
+Created At: 2026-05-22T14:53:13Z
+Completed At: 2026-05-22T14:53:13Z
+File Path: `file:///c:/Users/ADMIN/OneDrive/Desktop/project/src/components/kanban-board.tsx`
+Total Lines: 398
+Total Bytes: 16966
+Showing lines 1 to 100
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: "use client";
+2: 
+3: import { useState } from "react";
+4: import Link from "next/link";
+5: import { Building2, Search, Filter, Plus, ChevronDown, Check, ArrowRight, MoreHorizontal } from "lucide-react";
+6: import { Badge } from "@/components/ui/badge";
+7: 
+8: type Priority = "Low" | "Medium" | "High" | "Urgent" | "Priority" | "Big Deal";
+9: type Stage = "New" | "In Progress" | "Quoted" | "Won";
+10: 
+11: interface CardItem {
+12:   id: string;
+13:   category?: string;
+14:   priority: Priority;
+15:   customer: string;
+16:   company: string;
+17:   site: string;
+18:   product: string;
+19:   assignedTo: string;
+20:   value: string;
+21:   date: string;
+22:   stage: Stage;
+23: }
+24: 
+25: const initialCards: CardItem[] = [
+26:   {
+27:     id: "RFQ-0042",
+28:     category: "Industrial",
+29:     priority: "Medium",
+30:     customer: "Salim Al Balushi",
+31:     company: "Gulf Star Infra",
+32:     site: "Sohar Port Warehouse",
+33:     product: "MS Plate 12mm × 20MT",
+34:     assignedTo: "Adil Raaz",
+35:     value: "₹8.6L",
+36:     date: "14 May 2026",
+37:     stage: "New",
+38:   },
+39:   {
+40:     id: "RFQ-0041",
+41:     category: "Urgent",
+42:     priority: "High",
+43:     customer: "Mohammed Al Harthy",
+44:     company: "Al Harthy Construction",
+45:     site: "Muscat Hills Villa Complex",
+46:     product: "ISMB 200 × 12MT, TMT 16mm × 8MT",
+47:     assignedTo: "Adil Raaz",
+48:     value: "₹15.8L",
+49:     date: "13 May 2026",
+50:     stage: "New",
+51:   },
+52:   {
+53:     id: "RFQ-0039",
+54:     category: "Priority",
+55:     priority: "High",
+56:     customer: "Khalid Al Rawahi",
+57:     company: "Oman Builders Co.",
+58:     site: "Salalah Tower Block A",
+59:     product: "ISMB 300 × 25MT, Angle 65×65 × 5MT",
+60:     assignedTo: "Karthik Y",
+61:     value: "₹12.1L",
+62:     date: "12 May 2026",
+63:     stage: "In Progress",
+64:   },
+65:   {
+66:     id: "RFQ-0037",
+67:     category: "Low",
+68:     priority: "Low",
+69:     customer: "Ahmed Al Zadjali",
+70:     company: "Muscat Infra Pvt",
+71:     site: "Barka Commercial Complex",
+72:     product: "HR Coil 3mm × 15MT",
+73:     assignedTo: "Omnia Steels",
+74:     value: "₹6.3L",
+75:     date: "10 May 2026",
+76:     stage: "Quoted",
+77:   },
+78:   {
+79:     id: "RFQ-0035",
+80:     category: "Big Deal",
+81:     priority: "High",
+82:     customer: "Nasser Al Saadi",
+83:     company: "Al Madina Construction",
+84:     site: "Nizwa Residential G+4",
+85:     product: "TMT 12mm × 30MT, TMT 16mm × 20MT",
+86:     assignedTo: "Karthik Y",
+87:     value: "₹24.0L",
+88:     date: "08 May 2026",
+89:     stage: "Quoted",
+90:   },
+91:   {
+92:     id: "RFQ-0031",
+93:     category: "Standard",
+94:     priority: "Medium",
+95:     customer: "Ibrahim Al Lawati",
+96:     company: "Gulf Steel Works",
+97:     site: "Seeb Industrial She...",
+98:     product: "ISMB 200 × 10MT",
+99:     assignedTo: "Adil Raaz",
+100:     value: "₹4.8L",
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

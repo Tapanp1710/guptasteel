@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --primary-orange: #f97316;
+  --primary-accent: #f97316;
+  --success-green: #22c55e;
+  --warning-orange: #f97316;
+  --danger-red: #ef4444;
+  --purple: #8b5cf6;
+  --card-bg: #ffffff;
+  --page-bg: #f9fafb;
+  --border: #e5e7eb;
+  --muted-text: #6b7280;
+  --foreground: #111827;
+  --background: #f9fafb;
+  --surface: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), sans-serif;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.25);
+}
+
+body {
+  color-scheme: light;
+}
+
+@layer utilities {
+  .steel-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  }
+
+  .steel-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #2563eb 100%);
+  }
+
+  .sidebar {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  main {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
