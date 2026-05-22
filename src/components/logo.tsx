@@ -10,7 +10,7 @@ type LogoProps = {
 export function Logo({ compact = false, className }: LogoProps) {
   return (
     <div className={cn("flex items-center gap-3", className)}>
-      <div className="flex h-11 w-11 items-center justify-center rounded-2xl steel-gradient text-white shadow-lg shadow-blue-950/30">
+      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 text-white shadow-lg shadow-orange-950/20 border border-orange-300/30">
         <Building2 className="h-5 w-5" />
       </div>
       {!compact ? (
